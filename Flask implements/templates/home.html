@@ -1,0 +1,11 @@
+{% if output: %}
+	{{output}}
+{% else: %}
+	no resp
+{%endif%}
+
+<form  method="POST" >
+    {{ form.hidden_tag() }}
+    {{ form.link.label }} {{ form.link() }}
+    {{ form.submit() }}
+</form>
