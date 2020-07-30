@@ -83,14 +83,20 @@ def catsndogs():
 	print(cdlink)
 	X=model(loaded_model)
 	my_plot_div = plot([Scatter(x=[1, 2, 3], y=[3, 1, 6])], output_type='div')
-	return render_template('catsndogs.html',X=X,div_placeholder=Markup(my_plot_div))
+	lst=[]
+	for i in X[0]:
+		lst.append(i)
+	return render_template('catsndogs.html',X=lst,cdlink=cdlink,div_placeholder=Markup(my_plot_div))
 	#return render_template('catsndogs.html',cdlink=cdlink)
 
 @app.route('/landscapes',methods=['GET','POST'])
 def landscapes():
 	print(cdlink)
 	X=model(loaded_model2)
-	return render_template('landscapes.html',X=X,cdlink=cdlink)
+	lst=[]
+	for i in X[0]:
+		lst.append(i)
+	return render_template('landscapes.html',X=lst,cdlink=cdlink)
 
 @app.route('/',methods=['GET','POST'])
 def index():
