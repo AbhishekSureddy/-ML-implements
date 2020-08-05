@@ -154,7 +154,7 @@
     <div class='container col-lg-12 '>
         <div class='jumbotron' style="box-shadow:11px 8px 52px rgba(18,18,18,0.35) ;">
              <h1>
-                 Image classifiers<i class="fas fa-robot"></i></h1>
+                 Image classifiers</h1>
             <h3>
                 About :</h3>
             <p>The two image classifiers below 1. Cats and Dogs classifier and 2. Landscapes categorical classifier are designed based on the Convolution Neural Networks architecture. These models are optimized on iterations and presented here.
@@ -185,7 +185,7 @@
             <div class='col-lg-4 forms'>
                 <form method="POST">
                     <div class='form-group'>
-                        
+                        <p>Paste a valid link of cat/dog image:</p>
                         {{ form.hidden_tag() }}
                         {{ form.link(class='form-control') }}
                         {{ form.submit(class='btn btn-info btn-lg') }}
@@ -254,7 +254,7 @@
             <div class='col-lg-4 forms'>
                 <form method="POST">
                     <div class='form-group'>
-                        
+                        <p>Paste a valid link of any of the landscapes shown:</p>
                         {{ form2.hidden_tag() }}
                         {{ form2.link2(class='form-control') }}
                         {{ form2.submit2(class='btn btn-info btn-lg') }}
